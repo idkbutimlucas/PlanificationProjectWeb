@@ -1,4 +1,11 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('//PlanificationProjectWeb/public/styles/fonts/nunito/Nunito-Regular.ttf'),
+    url('//PlanificationProjectWeb/public/styles/fonts/nunito/Nunito-Black.ttf'),
+}
+
 body {
+    font-family: Nunito, sans-serif;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -20,8 +27,8 @@ form {
     justify-content: center;
 }
 
-.form-input {
-    padding: 0em;
+input {
+    border-radius: 5%;
 }
 
 .form-control {
