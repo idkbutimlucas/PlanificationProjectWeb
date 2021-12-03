@@ -8,7 +8,7 @@ body {
 .form {
     margin-top: 50vh; /* poussé de la moitié de hauteur de viewport */
     transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
-    background-color: blue;
+    background-color: black;
     padding: 2em;
     border-radius: 5%;
 }
@@ -27,11 +27,18 @@ form {
 .form-control {
     background-color: #DBDBDB;
     border: 0mm solid;
-    border-radius: 5%;
+    margin: 1em;
+    padding: 0.5em;
 }
 
 ::placeholder {
     color: #484848;
     font-size: 1em;
+}
+
+button {
+    border: 0;
+    border-radius: 5%;
+    background-color: #DEA000;
 }
 
