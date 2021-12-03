@@ -45,6 +45,10 @@ class __TwigTemplate_5e967d27aaff84fbf89ecc1adf1f707176ae83d3d8da7bc5c59a32318f0
     <meta charset=\"utf-8\">
     <link rel=\"stylesheet\" href=\"";
         // line 7
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/CSS/reboot.css"), "html", null, true);
+        echo "\">
+    <link rel=\"stylesheet\" href=\"";
+        // line 8
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("styles/CSS/login_inscription.css"), "html", null, true);
         echo "\">
     <title>Login</title>
@@ -53,7 +57,7 @@ class __TwigTemplate_5e967d27aaff84fbf89ecc1adf1f707176ae83d3d8da7bc5c59a32318f0
 
   <body class=\"text-center\">
     
-    <main class=\"form-signin\">
+    <main class=\"form\">
         <form>
             <h1 class=\"form-title\">Se connecter</h1>
 
@@ -93,7 +97,7 @@ class __TwigTemplate_5e967d27aaff84fbf89ecc1adf1f707176ae83d3d8da7bc5c59a32318f0
 
     public function getDebugInfo()
     {
-        return array (  48 => 7,  40 => 1,);
+        return array (  52 => 8,  48 => 7,  40 => 1,);
     }
 
     public function getSourceContext()
@@ -104,6 +108,7 @@ class __TwigTemplate_5e967d27aaff84fbf89ecc1adf1f707176ae83d3d8da7bc5c59a32318f0
 
   <head>
     <meta charset=\"utf-8\">
+    <link rel=\"stylesheet\" href=\"{{ asset ('styles/CSS/reboot.css')}}\">
     <link rel=\"stylesheet\" href=\"{{ asset ('styles/CSS/login_inscription.css')}}\">
     <title>Login</title>
   </head>
@@ -111,7 +116,7 @@ class __TwigTemplate_5e967d27aaff84fbf89ecc1adf1f707176ae83d3d8da7bc5c59a32318f0
 
   <body class=\"text-center\">
     
-    <main class=\"form-signin\">
+    <main class=\"form\">
         <form>
             <h1 class=\"form-title\">Se connecter</h1>
 
