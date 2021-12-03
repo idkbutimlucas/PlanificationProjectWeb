@@ -68,6 +68,8 @@
     </parameter>
     <parameter key="session.save_path">D:\Universite\Cours\UE230 Projet\AppPlan\Web\PlanificationProjectWeb\var\cache\dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
+    <parameter key="asset.request_context.base_path">null</parameter>
+    <parameter key="asset.request_context.secure">null</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
     <parameter key="debug.container.dump">D:\Universite\Cours\UE230 Projet\AppPlan\Web\PlanificationProjectWeb\var\cache\dev/App_KernelDevDebugContainer.xml</parameter>
@@ -102,6 +104,13 @@
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
         <argument type="service" id=".service_locator.mx0UMmY.App\Controller\HomeController"/>
+      </call>
+    </service>
+    <service id="App\Controller\InscriptionController" class="App\Controller\InscriptionController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.mx0UMmY.App\Controller\InscriptionController"/>
       </call>
     </service>
     <service id="App\Controller\LoginController" class="App\Controller\LoginController" public="true" autowire="true" autoconfigure="true">
@@ -1183,6 +1192,56 @@
       <argument>%session.storage.options%</argument>
     </service>
     <service id="session.marshaller" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\IdentityMarshaller"/>
+    <service id="assets.packages" class="Symfony\Component\Asset\Packages">
+      <argument type="service" id="assets._default_package"/>
+      <argument type="tagged_iterator" tag="assets.package" index-by="package" default-index-method="getDefaultPackageName" default-priority-method="getDefaultPackagePriority"/>
+    </service>
+    <service id="assets.empty_package" class="Symfony\Component\Asset\Package">
+      <argument type="service" id="assets.empty_version_strategy"/>
+    </service>
+    <service id="assets.context" class="Symfony\Component\Asset\Context\RequestStackContext">
+      <argument type="service" id="request_stack"/>
+      <argument type="service">
+        <service class="string">
+          <factory service="router.request_context" method="getBaseUrl"/>
+        </service>
+      </argument>
+      <argument type="service">
+        <service class="bool">
+          <factory service="router.request_context" method="isSecure"/>
+        </service>
+      </argument>
+    </service>
+    <service id="assets.path_package" class="Symfony\Component\Asset\PathPackage" abstract="true">
+      <argument type="abstract">base path</argument>
+      <argument type="abstract">version strategy</argument>
+      <argument type="service" id="assets.context"/>
+    </service>
+    <service id="assets.url_package" class="Symfony\Component\Asset\UrlPackage" abstract="true">
+      <argument type="abstract">base URLs</argument>
+      <argument type="abstract">version strategy</argument>
+      <argument type="service" id="assets.context"/>
+    </service>
+    <service id="assets.static_version_strategy" class="Symfony\Component\Asset\VersionStrategy\StaticVersionStrategy" abstract="true">
+      <argument type="abstract">version</argument>
+      <argument type="abstract">format</argument>
+    </service>
+    <service id="assets.empty_version_strategy" class="Symfony\Component\Asset\VersionStrategy\EmptyVersionStrategy"/>
+    <service id="assets.json_manifest_version_strategy" class="Symfony\Component\Asset\VersionStrategy\JsonManifestVersionStrategy" abstract="true">
+      <argument type="abstract">manifest path</argument>
+      <argument type="service" id="http_client" on-invalid="null"/>
+      <argument>false</argument>
+    </service>
+    <service id="assets.remote_json_manifest_version_strategy" class="Symfony\Component\Asset\VersionStrategy\RemoteJsonManifestVersionStrategy" abstract="true">
+      <argument type="abstract">manifest url</argument>
+      <argument type="service" id="http_client"/>
+      <deprecated package="symfony/framework-bundle" version="5.3">The "%service_id%" service is deprecated, use "assets.json_manifest_version_strategy" instead.</deprecated>
+    </service>
+    <service id="assets._default_package" class="Symfony\Component\Asset\PathPackage">
+      <argument></argument>
+      <argument type="service" id="assets.empty_version_strategy"/>
+      <argument type="service" id="assets.context"/>
+    </service>
     <service id="debug.debug_handlers_listener" class="Symfony\Component\HttpKernel\EventListener\DebugHandlersListener">
       <tag name="kernel.event_subscriber"/>
       <tag name="monolog.logger" channel="php"/>
@@ -1429,6 +1488,9 @@
         <argument type="service" id="twig.extension.trans"/>
       </call>
       <call method="addExtension">
+        <argument type="service" id="twig.extension.assets"/>
+      </call>
+      <call method="addExtension">
         <argument type="service" id="twig.extension.code"/>
       </call>
       <call method="addExtension">
@@ -1518,6 +1580,10 @@
     <service id="twig.extension.trans" class="Symfony\Bridge\Twig\Extension\TranslationExtension">
       <tag name="twig.extension"/>
       <argument>null</argument>
+    </service>
+    <service id="twig.extension.assets" class="Symfony\Bridge\Twig\Extension\AssetExtension">
+      <tag name="twig.extension"/>
+      <argument type="service" id="assets.packages"/>
     </service>
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension">
       <tag name="twig.extension"/>
@@ -1769,6 +1835,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\HomeController" class="App\Controller\HomeController" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\InscriptionController" class="App\Controller\InscriptionController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\InscriptionController" class="App\Controller\InscriptionController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\InscriptionController" class="App\Controller\InscriptionController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\LoginController" class="App\Controller\LoginController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -2128,6 +2197,12 @@
     <service id=".service_locator.mx0UMmY.App\Controller\HomeController" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator_context" id="App\Controller\HomeController"/>
       <argument>App\Controller\HomeController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.mx0UMmY" method="withContext"/>
+    </service>
+    <service id=".service_locator.mx0UMmY.App\Controller\InscriptionController" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator_context" id="App\Controller\InscriptionController"/>
+      <argument>App\Controller\InscriptionController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.mx0UMmY" method="withContext"/>
     </service>
@@ -2690,6 +2765,7 @@
     <service id="Symfony\Component\HttpFoundation\Session\Flash\FlashBagInterface" alias="session.flash_bag"/>
     <service id="session.storage.factory" alias="session.storage.factory.native"/>
     <service id="session.handler" alias="session.handler.native_file"/>
+    <service id="Symfony\Component\Asset\Packages" alias="assets.packages"/>
     <service id="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" alias="debug.file_link_formatter"/>
     <service id="router" alias="router.default" public="true"/>
     <service id="Symfony\Component\Routing\RouterInterface" alias="router.default"/>
