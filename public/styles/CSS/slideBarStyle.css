@@ -1,0 +1,39 @@
+.slideBar{
+  width: 200px;
+  height: 100%;
+  background-color: #3E5BA1;
+  border-radius: 20px;
+  border-top-right-radius: 0px;
+  position: fixed;
+  margin-left: 0px;
+  padding: 20px;
+}
+
+.listBtn{
+  list-style: none;
+  padding: 10px;
+  margin: auto;
+}
+
+.btnMenu{
+  background-color: #3E5BA1;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  border: 3px solid white;
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  transition: 0.5s;
+  font-family: sans-serif 'FiraSans';
+  font-weight: 600;
+  font-size: 16px;
+
+}
+
+.btnMenu:hover{
+  background-color: white;
+  color: #3E5BA1;
+  transition: 0.5s;
+  font-size: 20px;
+}
