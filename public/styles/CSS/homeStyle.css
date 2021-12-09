@@ -1,0 +1,10 @@
+body{
+  background-color: white;
+}
+
+.slideBar{
+  width: 100px;
+  height: 100%;
+  background-color: black;
+  border-radius: 20px;
+}
