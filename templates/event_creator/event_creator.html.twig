@@ -1,0 +1,40 @@
+<html lang="fr">
+
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ asset ('styles/CSS/reboot.css')}}">
+    <link rel="stylesheet" href="{{ asset ('styles/CSS/event_creator.css')}}">
+    <title>Créer un événement</title>
+  </head>
+
+  <body>
+    <main class="creator">
+        <div class="creator-left">
+            <div class="creator-description">
+                <input type="text" class="form-text"></input>
+            </div>
+        </div>
+        <div class="creator-right">
+            <div class="creator-pictures">
+                <div class="creator-pictures-text">
+                </div>
+                <div class="creator-pictures-button">
+                    <input type="file" name="upfile" />
+                </div>
+            </div>
+            <div class="creator-informations">
+                <div>
+                    <input type="locate"></input>
+                </div>
+                <input type="date"></input>
+                <input type="time"></input>
+            </div>
+            <div class="buttons">
+                <button class="btn-validate" type="submit">Valider</button>
+                <button class="btn-cancel" type="submit">Annuler</button>
+            </div>
+        </div>
+    </main>
+  </body>
+
+</html>

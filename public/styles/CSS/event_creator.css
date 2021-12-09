@@ -1,0 +1,61 @@
+@font-face {
+    font-family: 'Nunito';
+    src: url('//PlanificationProjectWeb/public/styles/fonts/nunito/Nunito-Regular.ttf'),
+    url('//PlanificationProjectWeb/public/styles/fonts/nunito/Nunito-Black.ttf'),
+}
+
+body {
+    font-family: Nunito, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.creator {
+    display: flex;
+    background: linear-gradient(to bottom, #3e5baa 10%, white 10% 80%);
+    border: #3e5baa solid 5px;
+    border-radius: 5%;
+    height: 80%;
+}
+
+.creator-description {
+    position: relative;
+    top: 15%; 
+    left: 5%
+}
+
+.form-text {
+    height: 50%;
+}
+
+.creator-informations {
+    position: relative;
+    top: 50%; 
+    left: 10%;
+}
+
+.buttons {
+    position: relative;
+    top: 75%; 
+    left: 50%;
+}
+
+.btn-validate {
+    padding: 0.5em;
+    color: white;
+    border: 0px;
+    border-radius: 10%;
+    background-color: rgb(75, 199, 75);
+}
+
+.btn-cancel {
+    padding: 0.5em;
+    color: white;
+    border: 0px;
+    border-radius: 10%;
+    background-color: rgb(255, 0, 0);
+}
+
+
