@@ -1,4 +1,7 @@
 {
+    "brick/math": {
+        "version": "0.9.3"
+    },
     "doctrine/annotations": {
         "version": "1.13",
         "recipe": {
@@ -35,14 +38,17 @@
     "google/cloud-storage": {
         "version": "v1.25.2"
     },
+    "google/common-protos": {
+        "version": "1.4.0"
+    },
     "google/crc32": {
         "version": "v0.1.0"
     },
     "google/gax": {
         "version": "0.25.0"
     },
-    "google/proto-client": {
-        "version": "0.25.0"
+    "google/grpc-gcp": {
+        "version": "v0.2.0"
     },
     "google/protobuf": {
         "version": "v3.19.1"
@@ -86,9 +92,6 @@
     "nikic/php-parser": {
         "version": "v4.13.2"
     },
-    "paragonie/random_compat": {
-        "version": "v9.99.100"
-    },
     "psr/cache": {
         "version": "2.0.0"
     },
@@ -115,6 +118,9 @@
     },
     "ralouphie/getallheaders": {
         "version": "3.0.3"
+    },
+    "ramsey/collection": {
+        "version": "1.2.2"
     },
     "ramsey/uuid": {
         "version": "3.9.6"
