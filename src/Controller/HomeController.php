@@ -25,8 +25,6 @@ class HomeController extends AbstractController
         $documentReference = $collectionReference->document('F4UNj1km4ZXnZEEczinM');
         $snapshot = $documentReference->snapshot();
 
-        dd($snapshot);
-
         return $this->render('home/index.html.twig', [
             'FirstName' => $snapshot['FirstName'],
         ]);
