@@ -1,42 +1,30 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="fr">
 
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ asset ('styles/CSS/login_inscription.css')}}">
-    <title>Inscription</title>
-  </head>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="{{ asset ('styles/CSS/register.css')}}">
+		<title>Inscription</title>
+		<link rel="stylesheet" href="register.css">
+		<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+	</head>
 
-  <body class="text-center">
-    
-    <main class="form">
-        <form>
-            <h1 class="form-title">S'inscire</h1>
-
-
-            <div class="form-input">
-                <input type="name" class="form-control" placeholder="Nom">
-                <input type="firstName" class="form-control" placeholder="Prénom">
-            </div>
-            <div class="form-input">
-                <input type="email" class="form-control" placeholder="Adresse email">
-            </div>
-            <div class="form-input">
-                <input type="password" class="form-control" placeholder="Mot de passe">
-            </div>
-            <div class="form-input">
-                <input type="password" class="form-control" placeholder="Confirmer votre mot de passe">
-            </div>
-
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="newsletters"> Recevoir des Newsletters
-                </label>
-            </div>
-            <button class="btn-lg" type="submit">S'inscire</button>
-        </form>
-    </main>
-    
-  </body>
-</html>
+	<body>
+		<div class="main">
+			<div class="signup">
+				<form>
+					<label for="title" aria-hidden="true">Inscription</label>
+					<input class="field" type="text" name="txt" placeholder="Nom d'utilisateur" required="">
+					<input class="field" type="email" name="email" placeholder="Email" required="">
+					<input class="field" type="password" name="pswd" placeholder="Mot de passe" required="">
+					<input class="field" type="password" name="pswd" placeholder="Confirmer votre mot de passe" required="">
+					<div class="check">
+						Accepter les newsletters ?
+						<input type="checkbox" name="nwlet" required=""></input>
+				</div>
+				<button>S'inscrire</button>
+			</form>
+		</div>
+	</body>
+</html></div></body></html>

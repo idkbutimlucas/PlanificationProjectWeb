@@ -25,8 +25,11 @@ class HomeController extends AbstractController
         $documentReference = $collectionReference->document('F4UNj1km4ZXnZEEczinM');
         $snapshot = $documentReference->snapshot();
 
+        setcookie('UserId', $snapshot['Id']);
+
         return $this->render('home/index.html.twig', [
             'FirstName' => $snapshot['FirstName'],
+            'Id' => $_COOKIE['UserId'],
         ]);
     }
 }
