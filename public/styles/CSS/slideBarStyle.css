@@ -56,7 +56,7 @@
   transition: 0.5s;
   font-family: 'Fira Sans', sans-serif;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 14px;
 
 
 }
@@ -65,7 +65,7 @@
   background-color: white;
   color: #242da5;
   transition: 0.5s;
-  font-size: 20px;
+  font-size: 16px;
 }
 
 .logo_app{
@@ -172,4 +172,9 @@ h1{
   color: #585858;
   margin-top: 1px;
   padding: 2px;
+}
+
+.iconUser{
+  color: white;
+  display: flex;
 }
