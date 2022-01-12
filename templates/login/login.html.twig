@@ -4,36 +4,24 @@
 
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{{ asset ('styles/CSS/reboot.css')}}">
-    <link rel="stylesheet" href="{{ asset ('styles/CSS/login_inscription.css')}}">
-    <title>Login</title>
-  </head>
-  <link href="D:\Universite\Cours\UE230 Projet\AppPlan\Web\PlanificationProjectWeb\public\styles\CSS\login_inscription.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset ('styles/CSS/login.css')}}">
+    	<title>Connexion</title>
+<link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+</head>
 
-  <body class="text-center">
-    
-    <main class="form">
-        <form>
-            <h1 class="form-title">Se connecter</h1>
-
-            <div class="form-input">
-                <input type="email" class="form-control" placeholder="Adresse email">
-            </div>
-            <div class="form-input">
-                <input type="password" class="form-control" placeholder="Mot de passe">
-            </div>
-            <div class="form-input">
-                <a href="">Mot de passe oublié ?</a>
-            </div>
-
-            <div class="checkbox">
-                <label>
-                    <input type="checkbox" value="remember-me"> Se souvenir de moi
-                </label>
-            </div>
-            <button class="btn-lg" type="submit">Se connecter</button>
-        </form>
-    </main>
-    
-  </body>
+<body>
+	<div class="main">  	
+			<div class="login">
+				<form>
+					<label for="title" aria-hidden="true">Connexion</label>
+					<input class="field" type="text" name="txt" placeholder="Nom d'utilisateur ou email" required="">
+					<input class="field" type="password" name="pswd" placeholder="Mot de passe" required="">
+					<div class="check">
+                        Se souvenir de moi ? <input type="checkbox" name="nwlet" required=""></input>
+                    </div>
+                    <button>Se connecter</button>
+				</form>
+			</div>
+	</div>
+</body>
 </html>

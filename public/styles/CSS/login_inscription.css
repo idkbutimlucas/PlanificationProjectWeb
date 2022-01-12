@@ -17,7 +17,8 @@ body {
     transform: translateY(-50%); /* tiré de la moitié de sa propre hauteur */
     background-color: #3e5baa;
     border-radius: 5%;
-    padding: 5%;
+    padding: 10%;
+    box-shadow: 10px 10px 5px rgb(233, 232, 232);
 }
 
 form {
@@ -28,7 +29,7 @@ form {
 }
 
 input {
-    border-radius: 5%;
+    border-radius: 20px;
     padding: 5% 0% 5%;
     margin: 5% 0% 5%;
 }
@@ -46,7 +47,7 @@ input {
 
 button {
     border: 0;
-    border-radius: 5%;
+    border-radius: 20px;
     background-color: rgb(255, 166, 47);
     padding: 5%;
     margin-top: 5%;
@@ -54,4 +55,13 @@ button {
 
 a {
     color: rgb(255, 166, 47);
+}
+
+@media screen and (min-width: 620px) {
+    input {
+        margin: 10% 0% 5%;
+    }
+    .form {
+        padding: 5%;
+    }
 }
