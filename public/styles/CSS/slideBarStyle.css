@@ -4,7 +4,9 @@
 .slideBar{
   width: 200px;
   height: 100%;
-  background-color: #559CB5;
+  /* background-color: #559CB5; */
+  background: linear-gradient(to bottom, #242da5, #2732cf, #0d1366);
+  background-color: #242da5;
   border-radius: 20px;
   border-top-right-radius: 0px;
   position: fixed;
@@ -19,7 +21,7 @@
 }
 
 .btnMenu{
-  background-color: #3E5BA1;
+  background: #0d1366;
   border-color: white;
   border-radius: 10px;
   color: white;
@@ -32,11 +34,36 @@
   font-weight: 600;
   font-size: 16px;
 
+
 }
 
 .btnMenu:hover{
   background-color: white;
-  color: #3E5BA1;
+  color: #242da5;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.btnMenuPlus{
+  background: #0d1366;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  border: 3px solid white;
+  width: 170px;
+  height: 50px;
+  margin: 10px;
+  transition: 0.5s;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+
+
+}
+
+.btnMenuPlus:hover{
+  background-color: white;
+  color: #242da5;
   transition: 0.5s;
   font-size: 20px;
 }
@@ -63,6 +90,86 @@ h1{
   border-radius: 5px;
   margin: auto;
   border: none;
+  color: #585858;
+  background-color: #B6B6B6;
+  transition: 0.8s;
+}
+
+.searchBar:hover{
+  background-color: #585858;
+  transition: 0.8s;
+  color: #B6B6B6;
+}
+
+.searchDate{
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  padding:2px;
+  border-style: none;
+  background-color: #B6B6B6;
+  color: #585858;
+  margin-left: 10px;
+  transition: 0.8s;
+}
+
+.searchDate:hover{
   color: #B6B6B6;
   background-color: #585858;
+  transition: 0.8s;
+}
+
+.rechercheDate{
+  display: flex;
+}
+
+.rechercheDate svg{
+  color: white;
+}
+
+.rechercheLieu{
+  display: flex;
+}
+
+.searchPlace{
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  padding:2px;
+  border-style: none;
+  background-color: #B6B6B6;
+  color: #585858;
+  margin-left: 10px;
+  transition: 0.8s;
+  margin-top: 10px;
+}
+
+.searchPlace:hover{
+  color: #B6B6B6;
+  background-color: #585858;
+  transition: 0.8s;
+}
+
+.rechercheLieu svg{
+  color: white;
+  margin-top: 10px;
+}
+
+.nombreParticip{
+  color: white;
+  font-family: 'Fira-Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.selectNombParticip{
+  border-style: none;
+  height: 25px;
+  font-family: 'Fira-Sans', sans-serif;
+  font-weight: 400;
+  border-radius: 5px;
+  color: #585858;
+  margin-top: 1px;
+  padding: 2px;
 }

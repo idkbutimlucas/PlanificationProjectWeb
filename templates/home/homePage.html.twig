@@ -6,6 +6,7 @@
 
     <meta charset="utf-8">
     <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.0/font/bootstrap-icons.css" integrity="sha384-7ynz3n3tAGNUYFZD3cWe5PDcE36xj85vyFkawcF6tIwxvIecqKvfwLiaFdizhPpN" crossorigin="anonymous">
   </head>
   <body>
 
@@ -20,32 +21,58 @@
             <h1>Rechercher</h1>
           </div>
           <div>
-            <input class="searchBar"type="text" name="" value="">
+            <input class="searchBar"type="text" name="" value="" placeholder="Nom de l'evenement">
           </div>
-          <div>
-
-          </div>
-          <div>
-
-          </div>
-        </div>
-
       </div>
 
-<br>
+
       <ul class="listBtn">
         <li>
-          <button type="button" name="button" class="btnMenu">teste</button>
+          <div class="rechercheDate">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-calendar-week" viewBox="0 0 16 16">
+              <path d="M11 6.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm-5 3a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1zm3 0a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5v-1z"></path>              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"/>
+              <path d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5zM1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4H1z"></path>
+            </svg>
+            <input type="date" class="searchDate" name="" value="">
+          </div>
+          <div class="rechercheLieu">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-geo-alt" viewBox="0 0 16 16">
+              <path d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A31.493 31.493 0 0 1 8 14.58a31.481 31.481 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94zM8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10z"/>
+              <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4zm0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+            </svg>
+            <input type="text" class="searchPlace"name="" value="" placeholder="Rechercher un lieu">
+          </div>
+          <div class="limteParticipants">
+            <p class="nombreParticip">Limite de participants</p>
+            <select class="selectNombParticip" name="">
+              <option value="">choisir une limite</option>
+              <option value="">10</option>
+              <option value="">20</option>
+              <option value="">30</option>
+              <option value="">40</option>
+              <option value="">50</option>
+              <option value="">60</option>
+              <option value="">70</option>
+              <option value="">80</option>
+              <option value="">90</option>
+              <option value="">100</option>
+            </select>
+          </div>
         </li>
+      </ul>
+
+      <br>
+
+
+      <div class="plusOption">
+        <h1>Plus d'options</h1>
+      <ul class="listBtn">
         <li>
-          <button type="button" name="button" class="btnMenu">teste</button>
-        </li>
-        <li>
-          <button type="button" name="button" class="btnMenu">teste</button>
-        </li>
-        <li>
-          <button type="button" name="button" class="btnMenu">teste</button>
-        </li>
+            <button type="button" name="button" class="btnMenuPlus">Parametres</button>
+          </li>
+          <li>
+            <button type="button" name="button" class="btnMenuPlus">Mes participants</button>
+          </li>
       </ul>
     </div>
 
