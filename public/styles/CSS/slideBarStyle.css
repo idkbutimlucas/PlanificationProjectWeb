@@ -91,7 +91,7 @@ h1{
   margin: auto;
   border: none;
   color: #585858;
-  background-color: #B6B6B6;
+  background-color: white;
   transition: 0.8s;
 }
 
@@ -107,14 +107,14 @@ h1{
   border-radius: 5px;
   padding:2px;
   border-style: none;
-  background-color: #B6B6B6;
+  background-color: white;
   color: #585858;
   margin-left: 10px;
   transition: 0.8s;
 }
 
 .searchDate:hover{
-  color: #B6B6B6;
+  color: white;
   background-color: #585858;
   transition: 0.8s;
 }
@@ -137,7 +137,7 @@ h1{
   border-radius: 5px;
   padding:2px;
   border-style: none;
-  background-color: #B6B6B6;
+  background-color: white;
   color: #585858;
   margin-left: 10px;
   transition: 0.8s;
@@ -145,7 +145,7 @@ h1{
 }
 
 .searchPlace:hover{
-  color: #B6B6B6;
+  color: white;
   background-color: #585858;
   transition: 0.8s;
 }
