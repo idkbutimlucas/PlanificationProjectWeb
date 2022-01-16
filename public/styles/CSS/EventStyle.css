@@ -1,0 +1,39 @@
+body{
+  display: flex;
+}
+
+.slideBar .blockInfoEvent{
+  display: flex;
+}
+
+
+.blockInfoEvent{
+  background: #0d1366;
+  width: 1000px;
+  height: 700px;
+  margin-left: 300px;
+  border-radius: 20px;
+  text-align: center;
+  padding-left: 5px;
+  padding-right: 5px;
+  padding-bottom: 5px;
+  margin-top: 50px;
+  box-shadow: 1px 1px 20px grey;
+}
+
+/* .titleEvent svg{
+  display: flex;
+  color: white;
+} */
+
+.nameEvent{
+  margin: auto;
+}
+
+
+.detailsEvent{
+  width: 1000px;
+  height: 670px;
+  background-color: white;
+  border-radius: 20px;
+}

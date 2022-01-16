@@ -5,12 +5,15 @@
   width: 200px;
   height: 100%;
   /* background-color: #559CB5; */
-  background-color: #242da5;
+  /* background-color: #242da5; */
+  background: #0d1366;
   border-radius: 20px;
   border-top-right-radius: 0px;
   /* position: fixed; */
   margin-left: 0px;
   padding: 20px;
+  overflow: scroll;
+  position: fixed;
 }
 .searchSection{
   margin-top: 10px;
@@ -185,7 +188,7 @@ h1{
   font-size: 20px;
 }
 
-/* .iconUser{ 
+/* .iconUser{
   color:white;
   font-size: 18px;
   font-family: 'Fira-Sans', sans-serif;
@@ -198,4 +201,3 @@ h1{
   border-style: solid;
   border-color: white;
 } */
-
