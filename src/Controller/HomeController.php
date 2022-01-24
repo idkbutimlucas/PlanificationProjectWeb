@@ -16,7 +16,7 @@ class HomeController extends AbstractController
         $this->firestore = $firestore;
     }
 
-    #[Route('/home', name: 'home')]
+    #[Route('/', name: 'home')]
     public function index(): Response
     {
         $database = $this->firestore->database();

@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,800;1,700&display=swap');
+
+body {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: white;
+}
+
+.main {
+    display: flex;
+}
+
+.main-left {
+	margin: 0;
+	padding: 0;
+	min-height: 100vh;
+	font-family: 'Jost', sans-serif;
+	background: white;
+}
+
+.main-right {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.slideBar{
+  width: 200px;
+  height: 100%;
+  /* background-color: #559CB5; */
+  background-color: #242da5;
+  /* background: #0d1366; */
+  /* position: fixed; */
+  margin-left: 0px;
+  padding: 20px;
+}
+.searchSection{
+  margin-top: 10px;
+}
+
+.listBtn{
+  list-style: none;
+  padding: 10px;
+  margin: auto;
+}
+
+.btnMenu{
+  background: #242da5;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  border: 3px solid white;
+  width: 150px;
+  height: 50px;
+  margin: 10px;
+  transition: 0.5s;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+
+
+}
+
+.btnMenu:hover{
+  background-color: white;
+  color: #242da5;
+  transition: 0.5s;
+  font-size: 20px;
+}
+
+.btnMenuPlus{
+  background: #242da5;
+  border-color: white;
+  border-radius: 10px;
+  color: white;
+  border: 3px solid white;
+  width: 170px;
+  height: 50px;
+  margin: 10px;
+  transition: 0.5s;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+
+
+}
+
+.btnMenuPlus svg{
+  display: flex;
+}
+
+.btnMenuPlus:hover{
+  background-color: white;
+  color: #242da5;
+  transition: 0.5s;
+  font-size: 16px;
+}
+
+.logo_app{
+  width: 200px;
+  height: 200px;
+  margin: auto;
+}
+h1{
+  color: white;
+  font-family: 'Fira Sans', sans-serif;
+  font-weight: 600;
+  font-size: 24px;
+}
+.listSearch{
+  list-style: none;
+  margin: 0px;
+}
+
+.searchBar{
+  width:180px;
+  height: 35px;
+  border-radius: 5px;
+  margin: auto;
+  border: none;
+  color: #585858;
+  background-color: white;
+  transition: 0.8s;
+}
+
+.searchBar:hover{
+  background-color: #585858;
+  transition: 0.8s;
+  color: #B6B6B6;
+}
+
+.searchDate{
+  width: 120px;
+  height: 25px;
+  border-radius: 5px;
+  padding:2px;
+  border-style: none;
+  background-color: white;
+  color: #585858;
+  margin-left: 10px;
+  transition: 0.8s;
+}
+
+.searchDate:hover{
+  color: white;
+  background-color: #585858;
+  transition: 0.8s;
+}
+
+.rechercheDate{
+  display: flex;
+}
+
+.rechercheDate svg{
+  color: white;
+}
+
+.rechercheLieu{
+  display: flex;
+}
+
+.searchPlace{
+  width: 140px;
+  height: 30px;
+  border-radius: 5px;
+  padding:2px;
+  border-style: none;
+  background-color: white;
+  color: #585858;
+  margin-left: 10px;
+  transition: 0.8s;
+  margin-top: 10px;
+}
+
+.searchPlace:hover{
+  color: white;
+  background-color: #585858;
+  transition: 0.8s;
+}
+
+.rechercheLieu svg{
+  color: white;
+  margin-top: 10px;
+}
+
+.nombreParticip{
+  color: white;
+  font-family: 'Fira-Sans', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+.selectNombParticip{
+  border-style: none;
+  height: 25px;
+  font-family: 'Fira-Sans', sans-serif;
+  font-weight: 400;
+  border-radius: 5px;
+  color: #585858;
+  margin-top: 1px;
+  padding: 2px;
+}
+
+.iconUser svg{
+  color: white;
+  font-size: 20px;
+}
+
+/* .iconUser{
+  color:white;
+  font-size: 18px;
+  font-family: 'Fira-Sans', sans-serif;
+  display: flex;
+  font-weight: 600;
+  margin: auto;
+  padding: 10px;
+  border-radius: 10px;
+  text-decoration: none;
+  border-style: solid;
+  border-color: white;
+} */
+
+.events {
+    width: 720px;
+}
+
+label {
+	color: black;
+	font-size: 2.3em;
+	justify-content: center;
+	display: flex;
+	margin: 60px 60px 40px 60px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: .5s ease-in-out;
+}
+
+.card {
+	background: white;
+	border-radius: 10px;
+    border: solid 4px #242da5;
+	box-shadow: 5px 10px 25px rgb(85, 85, 85);
+    margin-bottom: 60px;
+}
+
+.card-bar {
+	display: flex;
+    color: white;
+    background-color: #242da5;
+}
+
+.card-bar-title {
+	display: flex;
+	font-size: 28px;
+	align-items: center;
+	padding-top: 5px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.card-bar-title svg {
+	fill: white;
+	padding-right: 10px;
+}
+
+svg {
+	vertical-align: middle;
+	padding-right: 5px;
+}
+
+.card-bar-category {
+	color: black;
+	background-color: white;
+	display: flex;
+	align-items: center;
+	padding: 0 20px 0 20px;
+	border-radius: 0 20px 0 30px;
+}
+
+.card-bar-category p {
+	margin: 0px;
+}
+
+.bottom-card {
+    display: flex;
+    align-items: center;
+	justify-content: center;
+	padding-top: 6%;
+	padding-left: 15px;
+	padding-bottom: 5%;
+	background: linear-gradient(to bottom,#242da5 5%, white 5% 100%);
+	border-radius: 0px 0px 10px 10px;
+}
+
+.left-card {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	width: 50%;
+}
+
+.right-card {
+	display: flex;
+    flex-wrap: wrap;
+	justify-content: center;
+	width: 50%;
+}
+
+.event-info:first-of-type {
+	padding-right: 50px;
+}
+
+.event-info p {
+	margin-top: 5px;
+	display: flex;
+	align-items: center;
+}
+
+.left-card p {
+	background: #e0dede;
+    border-radius: 10px;
+    padding: 10px 25px 10px 25px;
+    margin: 0;
+}
+
+.subscribe {
+	width: 50%;
+	height: 40px;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: rgb(128, 194, 29);
+	font-size: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+}
+
+.unsubscribe {
+	width: 15%;
+	height: 40px;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: rgb(230, 30, 30);
+	font-size: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+}
+
+.alreadysubscribe {
+	width: 50%;
+	height: 40px;
+	justify-content: center;
+	display: block;
+	color: #fff;
+	background: rgb(125, 126, 123);
+	font-size: 1em;
+	font-weight: bold;
+	outline: none;
+	border: none;
+	border-radius: 20px;
+	margin-right: 10px;
+}
+
+.unsubscribe:hover {
+    background-color: #9e0000;
+	cursor: pointer;
+}
+
+.subscribe:hover {
+    background-color: rgb(92, 139, 21);
+	cursor: pointer;
+}
+
+.alreadysubscribe:hover {
+	cursor: not-allowed;
+}

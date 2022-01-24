@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class InscriptionController extends AbstractController
+class RegisterController extends AbstractController
 {
-    #[Route('/inscription', name: 'inscription')]
+    #[Route('/register', name: 'register')]
     public function index(): Response
     {
-        return $this->render('inscription/index.html.twig', [
-            'controller_name' => 'InscriptionController',
+        return $this->render('register/index.html.twig', [
+            'controller_name' => 'RegisterController',
         ]);
     }
 }
